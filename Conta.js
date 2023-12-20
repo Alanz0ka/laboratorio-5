@@ -1,15 +1,16 @@
 const {Transacao} = require("./main");
 class Conta extends Transacao{
-    constructor(descricao, valor, vencimento){
+    constructor(descricao, valor, tipoConta){
         super(descricao, valor)
-        this._vencimento = vencimento
+        this._tipoConta = tipoConta
     }
 
-    getVencimento(){
-        return this._vencimento
+    getTipoConta(){
+        return this._tipoConta
     }
-    setVencimento(vencimento){
-        this._vencimento = vencimento
+    setTipoConta(tipoConta){
+        this._tipoConta = tipoConta
     }
 }
+
 exports.Conta = Conta
